@@ -1,0 +1,18 @@
+body {
+  background: #252830;
+  color: #cfd2da;
+  font-size: 1rem;
+}
+h1 {
+  text-align: center;
+}
+table {
+  width: 100%;
+}
+table, td, th {
+  border: 1px solid #cfd2da;
+  text-align: left;
+}
+a {
+  color: #cfd2da;
+}
