@@ -44,7 +44,7 @@
     }
   ],
   "start_url": "/index.html",
-  "scope": ".",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#252830",

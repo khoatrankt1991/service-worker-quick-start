@@ -23,3 +23,9 @@
 <meta name="msapplication-TileColor" content="#fff">
 <meta name="theme-color" content="#3f51b5">
 ```
+
+# Service Worker Events
+
+
+# Service Worker Lifecycle
+[Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
