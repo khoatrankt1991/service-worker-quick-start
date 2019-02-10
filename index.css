@@ -16,3 +16,13 @@ table, td, th {
 a {
   color: #cfd2da;
 }
+button {
+  color: #cfd2da;
+  padding: 10px;
+  background: #252830;
+  border: 1px solid #cfd2da;
+  border-radius: 5px;
+}
+.header {
+  margin: 10px 0;
+}

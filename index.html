@@ -25,7 +25,38 @@
   </head>
   <body>
     <h1>Service Worker</h1>
-    <a href="./about.html">About Me</a>
+    <div class="header">
+        <a href="./about.html">About Me</a>
+    </div>
+    <button style="display: block;" onclick="displayNotification()">Click to display notification</button>
     <script src="./index.js"></script>
+    <script>
+      function displayNotification() {
+        const options = {
+          body: 'Here is the body',
+          icon: './images/icons/icon-72x72.png',
+          vibrate: [400, 100, 300],
+          badge: 'https://picsum.photos/300/100?image=0'
+        }
+        if ('Notification' in window ) {
+          if ( window.Notification.permission === 'granted') {
+            new Notification('Hello my notification', options);
+            if ( 'serviceWorker' in navigator ) {
+              navigator.serviceWorker.ready.then(swreg => {
+                swreg.showNotification('Hello On mobile', options);
+              })
+            }
+          } else {
+            window.Notification.requestPermission(res => {
+              if (res !== 'granted') {
+                console.log('Notification is not allowed');
+              } else {
+                new Notification('Hello my notification', options);
+              }
+            });
+          }
+        }
+      }
+    </script>
   </body>
 </html>
